@@ -27,12 +27,12 @@ onMounted(() => {
     radar: {
       // shape: 'circle',
       indicator: [
-        { name: '消费', max: 6500 },
-        { name: '好感', max: 16000 },
-        { name: '出行', max: 30000 },
-        { name: '小吃', max: 38000 },
-        { name: '爱好', max: 52000 },
-        { name: '景点', max: 25000 }
+        { name: '消费'},
+        { name: '好感'},
+        { name: '出行'},
+        { name: '小吃'},
+        { name: '爱好'},
+        { name: '景点'}
       ]
     },
     series: [

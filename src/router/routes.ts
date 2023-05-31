@@ -10,17 +10,16 @@ export const constantRoute = [
             hidden: true,//代表路由标题在菜单中是否隐藏  true:隐藏 false:不隐藏
             icon: "Promotion",//菜单文字左侧的图标,支持element-plus全部图标
         }
-    }
-    ,
+    },
     {
         //登录成功以后展示数据的路由
-        path: '/',
+        path: '/home',
         component: () => import('@/layout/index.vue'),
         name: 'layout',
         meta: {
             title: '',
             hidden: false,
-            icon: ''
+            icon: 'HomeFilled'
         },
         redirect: '/home',
         children: [
@@ -29,6 +28,29 @@ export const constantRoute = [
                 component: () => import('@/views/home/index.vue'),
                 meta: {
                     title: '首页',
+                    hidden: false,
+                    icon: 'HomeFilled'
+                }
+            }
+        ]
+    },
+    {
+        //登录成功以后进入portal页面
+        path: '/',
+        component: () => import('@/layout/portal.vue'),
+        name: 'portal',
+        meta: {
+            title: '',
+            hidden: false,
+            icon: ''
+        },
+        redirect: '/portal',
+        children: [
+            {
+                path: '/portal',
+                component: () => import('@/views/portal/index.vue'),
+                meta: {
+                    title: '大屏入口',
                     hidden: false,
                     icon: 'HomeFilled'
                 }
@@ -52,7 +74,7 @@ export const constantRoute = [
         name: 'Screen',
         meta: {
             hidden: false,
-            title: '数据大屏',
+            title: '数据大屏Demo',
             icon: 'Platform'
         }
     }]
@@ -104,7 +126,7 @@ export const asnycRoute = [
         component: () => import('@/layout/index.vue'),
         name: 'Product',
         meta: {
-            title: '商品管理',
+            title: '后台管理',
             icon: 'Goods',
         },
         redirect: '/product/trademark',

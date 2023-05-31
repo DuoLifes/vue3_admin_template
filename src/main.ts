@@ -18,8 +18,10 @@ import 'element-plus/theme-chalk/dark/css-vars.css'
 import router from './router'
 //引入仓库
 import pinia from './store'
+import * as THREE from 'three';
 //获取应用实例对象
 const app = createApp(App)
+app.config.globalProperties.$THREE = THREE;
 //安装element-plus插件
 app.use(ElementPlus, {
      locale: zhCn//element-plus国际化配置
